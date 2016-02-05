@@ -8,8 +8,8 @@ $CFG->dbtype    = 'mysqli';
 $CFG->dblibrary = 'native';
 $CFG->dbhost    = 'localhost';
 $CFG->dbname    = 'moodle';
-$CFG->dbuser    = 'helena.garcia';
-$CFG->dbpass    = 'hgg257001';
+$CFG->dbuser    = 'root';
+$CFG->dbpass    = '123456';
 $CFG->prefix    = 'mdl_';
 $CFG->dboptions = array (
   'dbpersist' => 0,
@@ -17,11 +17,13 @@ $CFG->dboptions = array (
   'dbsocket' => '',
 );
 
-$CFG->wwwroot   = 'http://localhost/moodle';
-$CFG->dataroot  = 'C:\\xampp\\moodledata';
+$CFG->wwwroot   = 'http://localhost:8080/moodle-esi2'; //192.168.137.187/
+$CFG->dataroot  = '/home/hgarcia/bitnami/lampstack/apache2/htdocs/moodledata';
 $CFG->admin     = 'admin';
 
 $CFG->directorypermissions = 0777;
+
+$CFG->keeptempdirectoriesonbackup = true;
 
 require_once(dirname(__FILE__) . '/lib/setup.php');
 
