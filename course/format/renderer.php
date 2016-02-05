@@ -264,11 +264,20 @@ abstract class format_section_renderer_base extends plugin_renderer_base {
                 $str->delete,
                 array('class' => 'editing_delete', 'data-action' => 'delete')
             );*/
+<<<<<<< HEAD
             $url = 'changenumsections.php?delete=1&courseid='.$course->id.'&sectionid='.$section->section.'&sesskey='.  sesskey();
             $controls[] = html_writer::link($url,
                     html_writer::empty_tag('img', array('src' => $this->output->pix_url('i/invalid'),
                     'class' => 'delete', 'alt' => 'eliminer')),
                     array('title' => 'Eliminer', 'class' => 'delete'));
+=======
+            $url = 'format/changenumsections.php?delete=1&courseid='.$course->id.'&sectionid='.$section->section.'&sesskey='.  sesskey();
+            //$url->param('delete',  $section->section);
+            $controls[] = html_writer::link($url,
+                    html_writer::empty_tag('img', array('src' => $this->output->pix_url('i/invalid'),
+                    'class' => 'delete', 'alt' => 'eliminer')),
+                    array('title' => 'eliminer', 'class' => 'delete'));
+>>>>>>> f52fdeb23883ea29c31758e622405aa822a294d7
         }
 
         if (!$onsectionpage && has_capability('moodle/course:movesections', $coursecontext)) {
